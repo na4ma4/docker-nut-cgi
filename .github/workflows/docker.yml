@@ -1,0 +1,15 @@
+name: "Docker"
+
+on:
+  pull_request:
+  push:
+
+jobs:
+  docker:
+    uses: na4ma4/actions/.github/workflows/docker-release.yml@main
+    with:
+      image: ghcr.io/na4ma4/docker-nut-cgi
+      platforms: 'linux/amd64,linux/arm64'
+      latest: true
+    secrets:
+      docker_github_token: ${{ secrets.GITHUB_TOKEN }}
