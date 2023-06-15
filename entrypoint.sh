@@ -17,7 +17,7 @@ if [ ! -z ${NUT_AUTH} ]; then
         echo 'server.modules += ( "mod_auth", "mod_authn_file" )'
         echo 'auth.backend = "plain"'
         echo 'auth.backend.plain.userfile  = "/etc/lighttpd/lighttpd.user"'
-        echo 'auth.require = ( "" => ("method" => "basic", "realm" => "example", "require" => "valid-user") )'
+        echo 'auth.require = ( "" => ("method" => "basic", "realm" => "NUT", "require" => "valid-user") )'
     ) > "/etc/lighttpd/conf-enabled/05-auth.conf"
 fi
 
