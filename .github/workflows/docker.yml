@@ -10,6 +10,7 @@ jobs:
     with:
       image: ghcr.io/na4ma4/docker-nut-cgi
       platforms: 'linux/amd64,linux/arm64'
-      latest: true
+      latest: "auto"
+      branches: "main"
     secrets:
       docker_github_token: ${{ secrets.GITHUB_TOKEN }}

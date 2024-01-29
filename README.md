@@ -25,5 +25,6 @@ $ docker run -d \
     --name nut-cgi \
     -p 8086:80 \
     -e NUT_HOSTS='MONITOR myups@myserver "The UPS"' \
+    -e NUT_ALLOW_SET=yes \
     danchal/nut-cgi
 ```
