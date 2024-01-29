@@ -21,4 +21,8 @@ if [ ! -z ${NUT_AUTH} ]; then
     ) > "/etc/lighttpd/conf-enabled/05-auth.conf"
 fi
 
+if [ ! -z ${NUT_ALLOW_SET} ]; then
+    sed -i.bak -e 's/.*I_HAVE_SECURED_MY_CGI_DIRECTORY/I_HAVE_SECURED_MY_CGI_DIRECTORY/' /etc/nut/upsset.conf
+fi
+
 /usr/sbin/lighttpd -D -f /etc/lighttpd/lighttpd.conf
